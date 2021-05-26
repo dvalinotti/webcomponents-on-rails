@@ -1,0 +1,9 @@
+<h1>Articles#index</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <article-card title="<%= article.title %>" articleId="<%= article.id %>" />
+    </li>
+  <% end %>
+</ul>
