@@ -7,16 +7,23 @@ export class ArticleCard extends LitElement {
   static styles = css`
     :host { display: block; }
     .article-card {
-      padding: 1rem;
       border: 2px solid lightgray;
       border-radius: 0.25rem;
       width: 100%;
       max-width: 325px;
-      font-family: Arial, sans-serif;
+      padding: 1rem;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+      width: 100%;
     }
     .article-card h2 {
       font-size: 1.125rem;
       margin: 0;
+    }
+    .article-card span {
+      font-size: 0.875rem;
     }
   `
   
@@ -24,13 +31,21 @@ export class ArticleCard extends LitElement {
 
   @property({ type: Number }) articleId = 0;
 
+  @property({ type: String }) createdAt = '';
+
+  getFormattedDate(): string {
+    const date = new Date(this.createdAt);
+    return date.toLocaleDateString();
+  }
+
   protected render(): TemplateResult {
     return html`
-      <article class="article-card">
-        <a href="/articles/${this.articleId}">
+      <a href="/articles/${this.articleId}">
+        <article class="article-card">
           <h2>${this.title}</h2>
-        </a>
-      </article>
+          <span>${this.getFormattedDate()}</span>
+        </article>
+      </a>
     `
   }
 }

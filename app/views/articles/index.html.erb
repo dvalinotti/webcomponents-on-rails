@@ -1,9 +1,9 @@
-<h1>Articles#index</h1>
+<h1 class="text-2xl font-bold mb-8">Latest Articles</h1>
 
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <article-card title="<%= article.title %>" articleId="<%= article.id %>" />
+      <article-card title="<%= article.title %>" articleId="<%= article.id %>" createdAt="<%= article.created_at %>" />
     </li>
   <% end %>
 </ul>

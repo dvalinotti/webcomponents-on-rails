@@ -13,9 +13,13 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav-bar></nav-bar>
+    <main class="container mx-auto mt-24">
+      <%= yield %>
+    </main>
   </body>
 </html>
