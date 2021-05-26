@@ -1,24 +1,17 @@
-# README
+# Web Components on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Ruby on Rails application with Lit web components integration. Enables component-driven UI in RoR with relatively low setup.
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
+- Ruby on Rails: 2.6.3
+- Lit: v1.3.0
 
-* System dependencies
+## Development
 
-* Configuration
+- Clone repo
+- Run `yarn` to install npm dependencies
+- Run `rvm install $(cat .ruby-version)
+- Run `rails db:setup`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Start development server with `rails server` or `rails s`.
